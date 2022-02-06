@@ -1,0 +1,133 @@
+@import "reset";
+@import "buttons";
+
+#root {
+  height: 100vh;  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "panel content";
+
+  height: 100%;
+
+  .panel {
+    grid-area: panel;
+    background: #BDBDBD;
+    padding: 40px 20px;
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .dashboard-element {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .board {
+    grid-area: content;
+    background: #F5FFFA;
+
+    .board-element {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .board-content-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      margin: 20px auto;
+      width: 80%;
+
+      .cards-container {
+        display: flex;
+        flex-direction: column;
+
+        .card {
+          display: flex;
+          
+          background: #F3F3F3;
+          border-radius: 10px;
+
+          .card-data-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 10px;
+          }
+
+          .card-link-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            width: 50%;
+            padding: 10px;
+          }
+
+          .card-element {
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+
+        }
+      }
+
+      .users-count-entry {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .profile {
+    grid-area: content;
+    background: #FFFFFF;
+    padding: 20px 50px;
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-form-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      padding: 10px 10px;
+      border: 1px solid blue;
+      border-radius: 10px;
+
+      .form-section {
+        margin-top: 5px;
+        margin-bottom: 10px;
+
+        input {
+          display: block;
+          width: 40%;
+          margin-top: 5px;
+          border-radius: 5px;
+        }
+
+        input:invalid {
+          border: 1px solid red;
+        }
+
+        .comment-input {
+          width: 100%;
+        }
+      }
+
+      .btn-submit-profile {
+        align-self: flex-end;
+      }
+    }
+  }
+}
